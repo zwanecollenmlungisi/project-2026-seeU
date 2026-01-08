@@ -1,0 +1,8 @@
+<!-- In your <head> -->
+<script src="js/config.js"></script>
+<!-- Then, update your main script block -->
+<script>
+    const SUPABASE_URL = window.SUPABASE_CONFIG.URL;
+    const SUPABASE_ANON_KEY = window.SUPABASE_CONFIG.ANON_KEY;
+    // ... rest of your code
+</script>
