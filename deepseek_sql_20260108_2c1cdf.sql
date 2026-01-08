@@ -1,0 +1,20 @@
+CREATE TABLE profiles (
+  id UUID REFERENCES auth.users PRIMARY KEY,
+  email TEXT,
+  full_name TEXT,
+  phone TEXT,
+  bio TEXT,
+  age INTEGER,
+  location TEXT,
+  interests TEXT[],
+  photos TEXT[],
+  video_url TEXT,
+  business_info JSONB,
+  payment_status TEXT DEFAULT 'pending',
+  payment_date TIMESTAMP,
+  subscription_end TIMESTAMP,
+  yoco_transaction_id TEXT,
+  payment_amount INTEGER,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
